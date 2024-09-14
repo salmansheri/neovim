@@ -150,6 +150,17 @@ dracula.setup({
     white = "#ABB2BF",
     black = "#191A21",
   },
+  integrations = {
+    cmp = true,
+    gitsigns = true,
+    nvimtree = true,
+    treesitter = true,
+    notify = false,
+    mini = {
+      enabled = true,
+      indentscope_color = "",
+    },
+  },
   -- show the '~' characters after the end of buffers
   show_end_of_buffer = true, -- default false
   -- use transparent background
@@ -174,3 +185,9 @@ dracula.setup({
   -- end,
 })
 vim.cmd.colorscheme("dracula")
+local lualine = require("lualine")
+lualine.setup({
+  options = {
+    theme = "dracula-nvim",
+  },
+})
